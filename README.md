@@ -7,24 +7,6 @@ Slidebar é uma biblioteca em Lua para criar barras de progresso interativas com
 
 Para usar o **Slidebar** no seu projeto, basta incluir o script e inicializar uma instância com as configurações desejadas.
 
-### Exemplo de Inicialização
-```lua
-local mySlider = Slidebar:new({
-    width = 300,            -- Largura da barra
-    height = 20,            -- Altura da barra
-    radius = 10,            -- Raio das bordas arredondadas
-    color = {               -- Definição das cores
-        default = {255, 255, 255, 255},  -- Cor da barra
-        hover = {200, 200, 200, 255}     -- Cor ao passar o mouse
-    },
-    orientation = "x",      -- Orientação da barra (x para horizontal, y para vertical)
-    useCircle = true,       -- Usar círculo no slider
-    useBackground = true,   -- Exibir fundo da barra
-    defaultValue = 0.5,     -- Valor inicial do progresso
-    smoothSpeed = 0.1       -- Velocidade da animação do progresso
-})
-```
-
 ## Funcionalidades
 
 ### Criar uma instância do Slidebar
