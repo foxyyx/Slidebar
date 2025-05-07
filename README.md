@@ -16,8 +16,18 @@ local mySlider = Slidebar:new({
     height = 20,            -- Altura da barra
     radius = 10,            -- Raio das bordas arredondadas
     color = {               -- Definição das cores
-        default = {r = 255, g = 255, b = 255, a = 255},  -- Cor da barra
-        hover = {r = 200, g = 200, b = 200, a = 255}     -- Cor ao passar o mouse
+        background = {
+            default = {255, 255, 255, 255 * .5},
+            hover = {255, 255, 255, 255 * .52}
+        },
+        bar = {
+            default = {124, 177, 255, 255},
+            hover = {124 - 10, 177 - 10, 255 - 10, 255}
+        },
+        circle = {
+            default = {255, 255, 255, 255},
+            hover = {255, 255, 255, 255} 
+        }
     },
     orientation = "x",      -- Orientação da barra (x para horizontal, y para vertical)
     useCircle = true,       -- Usar círculo no slider
@@ -29,7 +39,7 @@ local mySlider = Slidebar:new({
 - **`width`**: Largura da barra.
 - **`height`**: Altura da barra.
 - **`radius`**: Raio das bordas arredondadas da barra (opcional).
-- **`color`**: Cor da barra, tanto para o estado normal quanto para o estado "hover".
+- **`color`**: Cores, tanto para o estado normal quanto para o estado "hover".
 - **`orientation`**: Orientação da barra. Pode ser `"x"` para horizontal ou `"y"` para vertical.
 - **`useCircle`**: Se `true`, exibe um círculo interativo no final da barra.
 - **`useBackground`**: Se `true`, exibe o fundo da barra.
@@ -83,11 +93,18 @@ local slidebar = Slidebar:new({
     width = 300,
     height = 30,
     color = {
-        default = {255, 0, 0, 255},
-        hover = {0, 255, 0, 255},
-        bar = {255, 255, 0, 255},
-        background = {50, 50, 50, 255},
-        circle = {0, 0, 255, 255}
+        background = {
+            default = {255, 255, 255, 255 * .5},
+            hover = {255, 255, 255, 255 * .52}
+        },
+        bar = {
+            default = {124, 177, 255, 255},
+            hover = {124 - 10, 177 - 10, 255 - 10, 255}
+        },
+        circle = {
+            default = {255, 255, 255, 255},
+            hover = {255, 255, 255, 255} 
+        }
     },
     radius = 10,
     useCircle = true,
