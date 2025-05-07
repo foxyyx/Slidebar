@@ -14,9 +14,9 @@ Para usar o **Slidebar** no seu projeto, basta incluir o script e inicializar um
 ### Criar uma instância do Slidebar
 ```lua
 local slide = Slidebar:new({
-        width = 300,
-        height = 30,
-        color = {
+      width = 300,
+      height = 30,
+      color = {
         background = {
             default = {255, 255, 255, 255 * .5},
             hover = {255, 255, 255, 255 * .52}
@@ -92,9 +92,9 @@ end)
 
 ```lua
 local slide = Slidebar:new({
-        width = 300,
-        height = 30,
-        color = {
+      width = 300,
+      height = 30,
+      color = {
         background = {
             default = {255, 255, 255, 255 * .5},
             hover = {255, 255, 255, 255 * .52}
