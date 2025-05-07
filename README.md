@@ -3,7 +3,7 @@
 
 Slidebar é uma biblioteca em Lua para criar barras de progresso interativas com suporte a animações no MTA (Multi Theft Auto). Ela permite criar barras de progresso personalizáveis, com diferentes orientações, cores e efeitos visuais, além de permitir interações do usuário por meio do mouse.
 
-▶ [Clique aqui para assistir à demonstração do Slidebar](https://github.com/foxyyx/Slidebar/raw/main/slidebar.mp4)
+▶ [Clique aqui para assistir à demonstração do Slidebar](https://youtu.be/bUCjFezd320)
 
 ## Instalação
 
