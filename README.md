@@ -14,8 +14,8 @@ local mySlider = Slidebar:new({
     height = 20,            -- Altura da barra
     radius = 10,            -- Raio das bordas arredondadas
     color = {               -- Definição das cores
-        default = {r = 255, g = 255, b = 255, a = 255},  -- Cor da barra
-        hover = {r = 200, g = 200, b = 200, a = 255}     -- Cor ao passar o mouse
+        default = {255, 255, 255, 255},  -- Cor da barra
+        hover = {200, 200, 200, 255}     -- Cor ao passar o mouse
     },
     orientation = "x",      -- Orientação da barra (x para horizontal, y para vertical)
     useCircle = true,       -- Usar círculo no slider
