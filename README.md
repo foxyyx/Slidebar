@@ -56,7 +56,7 @@ mySlider:render(x, y, alpha)
 ```
 - **`x`**: Posição X onde a barra será desenhada.
 - **`y`**: Posição Y onde a barra será desenhada.
-- **`alpha`**: Valor de opacidade para desenhar a barra (0 a 255).
+- **`alpha`**: Valor de opacidade para desenhar a barra (0 a 1).
 
 Esta função desenha a barra no jogo, considerando a posição, as cores e o progresso atual.
 
