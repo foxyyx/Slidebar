@@ -2,7 +2,7 @@ Slidebar = {}
 
 function Slidebar:new(props)
     if not (tonumber(props.width) and tonumber(props.height) and type(props.color) == "table") then
-        error("[SLIDEBAR]: Width or Height not defined.", 2)
+        error("[SLIDEBAR]: Width or Height or Color not defined.", 2)
     end
 
     local instance = {
