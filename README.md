@@ -11,11 +11,10 @@ Para usar o **Slidebar** no seu projeto, basta incluir o script e inicializar um
 
 ### Criar uma instância do Slidebar
 ```lua
-local mySlider = Slidebar:new({
-    width = 300,            -- Largura da barra
-    height = 20,            -- Altura da barra
-    radius = 10,            -- Raio das bordas arredondadas
-    color = {               -- Definição das cores
+local slide = Slidebar:new({
+        width = 300,
+        height = 30,
+        color = {
         background = {
             default = {255, 255, 255, 255 * .5},
             hover = {255, 255, 255, 255 * .52}
@@ -29,11 +28,12 @@ local mySlider = Slidebar:new({
             hover = {255, 255, 255, 255} 
         }
     },
-    orientation = "x",      -- Orientação da barra (x para horizontal, y para vertical)
-    useCircle = true,       -- Usar círculo no slider
-    useBackground = true,   -- Exibir fundo da barra
-    defaultValue = 0.5,     -- Valor inicial do progresso
-    smoothSpeed = 0.1       -- Velocidade da animação do progresso
+    radius = 10,
+    useCircle = true,
+    orientation = "x",
+    useBackground = true,
+    defaultValue = 0.5,
+    smoothSpeed = 0.05
 })
 ```
 - **`width`**: Largura da barra.
@@ -89,10 +89,10 @@ end)
 ### Exemplo
 
 ```lua
-local slidebar = Slidebar:new({
-    width = 300,
-    height = 30,
-    color = {
+local slide = Slidebar:new({
+        width = 300,
+        height = 30,
+        color = {
         background = {
             default = {255, 255, 255, 255 * .5},
             hover = {255, 255, 255, 255 * .52}
@@ -115,23 +115,17 @@ local slidebar = Slidebar:new({
 })
 
 -- Função chamada sempre que a barra for deslizada
-slidebar:onSlide(function(progress)
+slide:onSlide(function(progress)
     print("Progresso: " .. progress * 100 .. "%")  -- Exibe o progresso como percentual
 end)
 
 -- Função chamada quando o usuário termina de interagir com a barra
-slidebar:onEnd(function(progress)
+slide:onEnd(function(progress)
     print("Interação finalizada. Progresso final: " .. progress * 100 .. "%")  -- Exibe o progresso final
 end)
 
 -- Renderizar a barra na tela
 addEventHandler("onClientRender", root, function()
-    slidebar:render(100, 100, 255)  -- Desenha a barra na posição (100, 100) e com 255 de opacidade
-end)
-
--- Atualizar a barra a cada movimento do cursor
-addEventHandler("onClientRender", root, function()
-    local x, y = getCursorPosition()
-    slidebar:updateProgress(100, 100, 300, 30)  -- Atualiza o progresso baseado na posição do cursor
+    slide:render(300, 500, 1)  -- Desenha a barra na posição (100, 100) e com 255 de opacidade
 end)
 ```
