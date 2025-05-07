@@ -112,7 +112,7 @@ function Slidebar:render(x, y, alpha)
     local barX, barY, barWidth, barHeight = x, y, width, height
     local progress = self.actualProgress
     local orientation = self.orientation
-    local isHover = self.isHover or inFocus
+    local isHover = self.isHover or inFocus == self
 
     -- Draw Aliasses
     local color = self.color
