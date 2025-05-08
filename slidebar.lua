@@ -68,7 +68,7 @@ function Slidebar:updateProgress(x, y, width, height)
     local isHover = (cursorX >= x and cursorX <= x + width and cursorY >= y and cursorY <= y + height)
     self.isHover = isHover
 
-    if not (isHover or isSliding) or (inFocus ~= self) then
+    if not (isHover or isSliding or inFocus == self) then
         return false
     end
 
